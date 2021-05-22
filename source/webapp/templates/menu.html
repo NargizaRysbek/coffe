@@ -5,42 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/menu.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Menu</title>
 </head>
 
 <body>
-    <section class="menu-page">
+    <section class="main-page">
         <div class="container">
-            <header class="header__main-nav">
-                <div>
-                    <a href="index.html"> <img class="header__logo" src="../static/img/logo.png" alt="logo" /></a>
+            <div class="header-wrapper">
+                <header class="header">
+                    <div>
+                        <a href="index.html"> 
+                            <img class="header__logo" src="img/logo.png" alt="logo" />
+                        </a>
+                    </div>
 
+                    <ul class="header__nav-bar">
+                        <li>
+                            <a class="header__link" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="#about-us">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a class="header__link menu" href="menu.html">MENUS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="events.html">EVENTS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="contact.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </header>
+            </div>
+
+            <div class="mobile-nav-bar">
+                <div class="mobile-logo-wrapper">
                 </div>
-                <ul class="header__nav-bar">
-                    <li>
-                        <a class="header__link" href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="#about-us">ABOUT US</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="menu.html">MENUS</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="events.html">EVENTS</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="contact.html">CONTACT US</a>
-                    </li>
-                </ul>
 
-                <!-- <div class="header__burger-btn" hidden>
-                    <img class="open-burger-menu" src="img/burgerIcon.svg" alt="burger button">
-                    <img class="close-burger-menu" src="img/closeIcon.svg" alt="close Icon" hidden>
-                </div> -->
-            </header>
+                <button class="burger-menu-show"></button>
+                <button class="burger-menu-hide hide"></button>
+
+                <nav class="burger-menu" id="burgerMenu">
+                    <span class="pop-up-curtain"></span>
+                    <ul class="burger-menu__wrapper">
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="index.html">
+                                HOME
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="index.html#about-us">
+                                ABOUT US
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="menu.html">
+                                MENUS
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="events.html">
+                                EVENTS
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="contact.html">
+                                CONTACT US
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
         </div>
+    </section>
+    <section class="menu-page">
         <div class="menu-navbar">
             <div class="container-navbar">
                 <ul class="menu__list-wrapper">
@@ -58,8 +101,11 @@
         <div class="menu-cards">
             <div class="container-menu">
                 <div class="menu-card-wrapper">
+                    <button id="hideMenuModal"></button>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
@@ -70,7 +116,37 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
+                        <div class="menu__card-text">
+                            <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
+                            <p class="menu__card-description">
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                            </p>
+                            <h3 class="menu__price">$14</h3>
+                        </div>
+
+                    </div>
+                    <div class="menu__card">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
+                        <div class="menu__card-text">
+                            <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
+                            <p class="menu__card-description">
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                            </p>
+                            <h3 class="menu__price">$14</h3>
+                        </div>
+
+                    </div>
+                    <div class="menu__card">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
@@ -81,7 +157,9 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
@@ -92,7 +170,9 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
@@ -103,7 +183,9 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
@@ -114,7 +196,9 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
@@ -125,10 +209,14 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                                 plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                             </p>
                             <h3 class="menu__price">$14</h3>
@@ -136,10 +224,14 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                                 plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                             </p>
                             <h3 class="menu__price">$14</h3>
@@ -147,10 +239,14 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
+                                plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                                 plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                             </p>
                             <h3 class="menu__price">$14</h3>
@@ -158,32 +254,14 @@
 
                     </div>
                     <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
+                        <div class="modal-img-curtain">
+                            <img class="menu__card-img" src="img/burger.png" alt="">
+                        </div>
                         <div class="menu__card-text">
                             <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
                             <p class="menu__card-description">
                                 plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
-                            </p>
-                            <h3 class="menu__price">$14</h3>
-                        </div>
-
-                    </div>
-                    <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
-                        <div class="menu__card-text">
-                            <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
-                            <p class="menu__card-description">
                                 plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
-                            </p>
-                            <h3 class="menu__price">$14</h3>
-                        </div>
-
-                    </div>
-                    <div class="menu__card">
-                        <img class="menu__card-img" src="../static/img/burger.png" alt="">
-                        <div class="menu__card-text">
-                            <h3 class="menu__card-title">IMPOSSIBLE BURGER</h3>
-                            <p class="menu__card-description">
                                 plant-based patty topped with arugula, tomato, onion, and served on a brioche roll
                             </p>
                             <h3 class="menu__price">$14</h3>
@@ -197,13 +275,13 @@
         </div>
     </section>
     <footer class="footer-block">
-        <img class="footer-logo" src="../static/img/footer-logo.png" alt="footer logo">
+        <img class="footer-logo" src="img/footer-logo.png" alt="footer logo">
         <div class="container">
             <div class="footer__social-media">
                 <div>
-                    <a href=""><img class="soc-media" src="../static/img/facebook.png" alt=""></a>
-                    <a href=""><img class="soc-media" src="../static/img/insta.png" alt=""></a>
-                    <a href=""><img class="soc-media" src="../static/img/sova.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="img/facebook.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="img/insta.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="img/sova.png" alt=""></a>
 
                 </div>
                 <h3 class="footer__text">2021 © All Rights reserved The Blue Iguana</h3>
@@ -212,7 +290,9 @@
 
     </footer>
 
-    <script src="../static/js/script.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

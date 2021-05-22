@@ -5,48 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/events.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
+    <section class="main-page">
+        <div class="container">
+            <div class="header-wrapper">
+                <header class="header">
+                    <div>
+                        <a href="index.html"> 
+                            <img class="header__logo" src="img/logo.png" alt="logo" />
+                        </a>
+                    </div>
+
+                    <ul class="header__nav-bar">
+                        <li>
+                            <a class="header__link" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="index.html#about-us">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="menu.html">MENUS</a>
+                        </li>
+                        <li>
+                            <a class="header__link events" href="events.html">EVENTS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="contact.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </header>
+            </div>
+
+            <div class="mobile-nav-bar">
+                <div class="mobile-logo-wrapper">
+                </div>
+
+                <button class="burger-menu-show"></button>
+                <button class="burger-menu-hide hide"></button>
+
+                <nav class="burger-menu" id="burgerMenu">
+                    <span class="pop-up-curtain"></span>
+                    <ul class="burger-menu__wrapper">
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="index.html">
+                                HOME
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="index.html#about-us">
+                                ABOUT US
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="menu.html">
+                                MENUS
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="events.html">
+                                EVENTS
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="contact.html">
+                                CONTACT US
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
     <section class="menu-page">
         <div class="container">
-            <header class="header__main-nav">
-                <div>
-                    <a href="index.html"> <img class="header__logo" src="../static/img/logo.png" alt="logo" /></a>
-
-                </div>
-                <ul class="header__nav-bar">
-                    <li>
-                        <a class="header__link" href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="about-us">ABOUT US</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="menu.html">MENUS</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="events.html">EVENTS</a>
-                    </li>
-                    <li>
-                        <a class="header__link" href="contact.html">CONTACT US</a>
-                    </li>
-                </ul>
-
-                <!-- <div class="header__burger-btn" hidden>
-                    <img class="open-burger-menu" src="img/burgerIcon.svg" alt="burger button">
-                    <img class="close-burger-menu" src="img/closeIcon.svg" alt="close Icon" hidden>
-                </div> -->
-            </header>
             <div class="event">
                 <h1 class="daily-title">Daily Events</h1>
                 <div class="event-cards">
+                    <button id="hideEventModal"></button>
                     <div class="dailyCard-wrapper">
                         <h3 class="dailyCard__days">Monday</h3>
                         <div class="dailyCard__grey">
-                            <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
                             <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
                             <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
                                 league.Free! Every
@@ -57,7 +105,9 @@
                     <div class="dailyCard-wrapper">
                         <h3 class="dailyCard__days">Monday</h3>
                         <div class="dailyCard__grey">
-                            <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
                             <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
                             <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
                                 league.Free! Every
@@ -68,9 +118,25 @@
                     <div class="dailyCard-wrapper">
                         <h3 class="dailyCard__days">Monday</h3>
                         <div class="dailyCard__grey">
-                            <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
                             <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
                             <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
                                 league.Free! Every
                                 Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
                         </div>
@@ -79,10 +145,12 @@
                     <div class="dailyCard-wrapper">
                         <h3 class="dailyCard__days">Monday</h3>
                         <div class="dailyCard__grey">
-                            <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
                             <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
                             <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
+                                league.Free! Ever
                                 Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
                         </div>
                         <p class="dailyCard_whishes">Happy Hour Drinks All Day till 8 pm</p>
@@ -90,9 +158,25 @@
                     <div class="dailyCard-wrapper">
                         <h3 class="dailyCard__days">Monday</h3>
                         <div class="dailyCard__grey">
-                            <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
                             <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
                             <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
+                                league.Free! Every
                                 league.Free! Every
                                 Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
                         </div>
@@ -104,38 +188,51 @@
             <div class="sport">
                 <h1 class="sport-title">Sport Events</h1>
                 <div class="sport-cards">
-                    <div class="sportCard-wrapper">
-                        <div class="sportCard__grey">
-                            <img class="sportCard__img" src="../static/img/sport.png" alt="">
-                            <h3 class="sportCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="sportCard_discription">World Tavern Poker, America’s number 1 bar poker
+                    <div class="dailyCard-wrapper">
+                        <div class="dailyCard__grey">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
+                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
+                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
+                                league.Free! Every
+                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
+                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
+                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
+                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
+                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dailyCard-wrapper">
+                        <div class="dailyCard__grey">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
+                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
+                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
                                 league.Free! Every
                                 Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
                         </div>
                     </div>
-                    <div class="sportCard-wrapper">
-                        <div class="sportCard__grey">
-                            <img class="sportCard__img" src="../static/img/sport.png" alt="">
-                            <h3 class="sportCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="sportCard_discription">World Tavern Poker, America’s number 1 bar poker
+                    <div class="dailyCard-wrapper">
+                        <div class="dailyCard__grey">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
+                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
+                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
                                 league.Free! Every
                                 Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
                         </div>
                     </div>
-                    <div class="sportCard-wrapper">
-                        <div class="sportCard__grey">
-                            <img class="sportCard__img" src="../static/img/sport.png" alt="">
-                            <h3 class="sportCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="sportCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                    </div>
-                    <div class="sportCard-wrapper">
-                        <div class="sportCard__grey">
-                            <img class="sportCard__img" src="../static/img/sport.png" alt="">
-                            <h3 class="sportCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="sportCard_discription">World Tavern Poker, America’s number 1 bar poker
+                    <div class="dailyCard-wrapper">
+                        <div class="dailyCard__grey">
+                            <div class="event-modal-img-curtain">
+                                <img class="dailyCard__img" src="img/event-1.png" alt="">
+                            </div>
+                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
+                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
                                 league.Free! Every
                                 Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
                         </div>
@@ -146,14 +243,13 @@
     </section>
 
     <footer class="footer-block">
-        <img class="footer-logo" src="../static/img/footer-logo.png" alt="footer logo">
+        <img class="footer-logo" src="img/footer-logo.png" alt="footer logo">
         <div class="container">
             <div class="footer__social-media">
                 <div>
-                    <a href=""><img class="soc-media" src="../static/img/facebook.png" alt=""></a>
-                    <a href=""><img class="soc-media" src="../static/img/insta.png" alt=""></a>
-                    <a href=""><img class="soc-media" src="../static/img/sova.png" alt=""></a>
-
+                    <a href=""><img class="soc-media" src="img/facebook.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="img/insta.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="img/sova.png" alt=""></a>
                 </div>
                 <h3 class="footer__text">2021 © All Rights reserved The Blue Iguana</h3>
             </div>
@@ -161,7 +257,9 @@
 
     </footer>
 
-    <script src="../static/js/script.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

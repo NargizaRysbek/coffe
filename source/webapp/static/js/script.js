@@ -65,10 +65,38 @@ function hideBurgerMenu() {
     burgerMenu.style.transform = 'translateX(100%)';
 }
 
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
-$(function () {
-    Carousel.init($("#carousel"));
-    $("#carousel").init();
+    simulateTouch: false,
+
+    slidesPerView: 1,
+
+    watchOverflow: true,
+
+    centeredSlides: true,
+
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    speed: 800,
+
+    effect: 'coverflow',
+
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 50,
+    },
 });
 
 var _gaq = _gaq || [];
@@ -91,18 +119,59 @@ _gaq.push(['_trackPageview']);
 $(function() {
     let header = $('.header-wrapper');
     let hederHeight = header.height(); // вычисляем высоту шапки
-     
+
     $(window).scroll(function() {
-      if($(this).scrollTop() > 1) {
-       header.addClass('header_fixed');
-       $('.main-page').css({
-          'paddingTop': hederHeight+'px' // делаем отступ у main-page, равный высоте шапки
-       });
-      } else {
-       header.removeClass('header_fixed');
-       $('.main-page').css({
-        'paddingTop': 0 // удаляю отступ у main-page, равный высоте шапки
-       })
-      }
+        if($(this).scrollTop() > 1 && $('.main-page').width() > 940) {
+            header.addClass('header_fixed');
+            $('.main-page').css({
+                'paddingTop': hederHeight+'px', // делаем отступ у main-page, равный высоте шапки
+            });
+        } else {
+            header.removeClass('header_fixed');
+            $('.main-page').css({
+                'paddingTop': 0, // удаляю отступ у main-page, равный высоте шапки
+            });
+        }
     });
+    
 });
+
+// MENU PAGE 
+
+let foodImageCurtain = document.getElementsByClassName("modal-img-curtain");
+let foodImage = document.getElementsByClassName("menu__card-img");
+let hideMenuModal = document.getElementById("hideMenuModal");
+
+for (let i = 0; i < foodImageCurtain.length; i++) {
+    foodImage[i].addEventListener("click", function() {
+        foodImageCurtain[i].classList.add('menu__card-img-modal');
+        foodImage[i].classList.add('menu__card-img-size');
+        hideMenuModal.style.display = 'block';
+    });
+
+    hideMenuModal.addEventListener("click", function() {
+        foodImageCurtain[i].classList.remove('menu__card-img-modal');
+        foodImage[i].classList.remove('menu__card-img-size');
+        hideMenuModal.style.display = 'none';
+    });
+}
+
+// EVENT PAGE
+
+let eventImageCurtain = document.getElementsByClassName("event-modal-img-curtain");
+let eventImage = document.getElementsByClassName("dailyCard__img");
+let hideEventModal = document.getElementById("hideEventModal");
+
+for (let i = 0; i < eventImageCurtain.length; i++) {
+    eventImage[i].addEventListener("click", function() {
+        eventImageCurtain[i].classList.add('event__card-img-modal');
+        eventImage[i].classList.add('event__card-img-size');
+        hideEventModal.style.display = 'block';
+    });
+
+    hideEventModal.addEventListener("click", function() {
+        eventImageCurtain[i].classList.remove('event__card-img-modal');
+        eventImage[i].classList.remove('event__card-img-size');
+        hideEventModal.style.display = 'none';
+    });
+}
