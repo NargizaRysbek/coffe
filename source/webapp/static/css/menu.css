@@ -312,7 +312,7 @@ button {
 }
 
 .menu__card {
-  width: 223px;
+  width: 310px;
   background: #F3F3F3;
   margin: 5px;
   display: flex;
@@ -382,7 +382,7 @@ button {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 8px;
+  font-size: 13px;
   line-height: 12px;
   color: #2C2586;
 }
